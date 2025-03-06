@@ -6,7 +6,7 @@ import subprocess
 ppt = glob.glob('./*.pptx')[0]
 folder = 'ppt'
 imagesDirectory = f'{folder}/ppt/media'
-types = ('*.jpeg', '*.jpg')
+types = ('*.jpeg', '*.jpg', '*.png')
 
 os.system(f'7z x "{ppt}" -o{folder}')
 
