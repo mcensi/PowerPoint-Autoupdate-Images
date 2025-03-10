@@ -15,7 +15,7 @@ for files in types:
     images.extend(glob.glob(f'{imagesDirectory}/{files}'))
 
 for image in images:
-	output = subprocess.check_output(f'exiftool -UserComment {image} -ext jpg -ext jpeg -q', shell=True).decode("utf-8")
+	output = subprocess.check_output(f'exiftool -UserComment {image} -q', shell=True).decode("utf-8")
 	if(output != ''):
 		newImage = output.split(': ')[1].split('\r\n')[0]
 		print(newImage)
